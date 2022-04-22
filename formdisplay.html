@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src="queries.js"></script>
+   <style>
+       .tab{
+           display: inline;
+           margin: 0 13px;
+       }
+       body{
+        background-image: linear-gradient(to right, rgb(238, 142, 247) , rgb(162, 214, 245));
+        /* padding: 5px; */
+       }
+       .tab-content
+       {
+           display:none;
+       }
+       iframe{
+           width: 100%;
+
+       }
+   </style>
+</head>
+
+<body>
+    <div class="tab-wrapper">
+        <div class="tab" >Fee Estimation</div>
+        <div class="tab" >Custodian</div>
+        <div class="tab" >Internship Duration</div>
+        <div class="tab" >Residence</div>
+        <div class="tab" >Study certificate</div>
+        <div class="tab" >Study and conduct certificate</div>
+        <div class="tab" >To Whomsoever it may concern</div>
+    </div>
+    <div class="tab-content" style="display: block;">
+        <div align="center" >
+            <h1>Select your required Certificate!</h1>
+        </div>
+    </div>
+    <div class="tab-content" id="inputForm"> 
+        <div align="center" style="padding-top:100px ;" >
+            <div class="container-fluid">
+                <div class="card" style="width: 22rem;" align="center">
+                    <div class="card-body">
+                      <h5 class="card-title">
+                         <!-- <img class="card-img-top" src="newlogo.bmp" alt=" Vishnu Universal learning" height="105px" width="100px">  --> 
+                        <table><tr><td>
+                          <img class="card-img-top" src="newlogo.bmp" alt=" Vishnu Universal learning" height="105px" width="100px">  
+                          <!-- <img src="https://img.collegedekhocdn.com/media/img/institute/logo/Vishnu_Universal_Learning.png" width='100' height='105' alt=""></td> -->
+                        <td> <b>SHRI VISHNU DENTAL <p align="center"> COLLEGE</p></b> </td></tr></table>
+                        
+                      
+                      </h5>
+                      <div class="form-group" action="get-method.php" method="get" >
+                         
+                          <label class="form-label">
+                            <input type="text" class="form-control" placeholder="date" id="date">
+                        </label>
+                          <label class="form-label">
+                            <input type="text" class="form-control" placeholder="registration number" id="reg">
+                        </label>
+                        <label class="form-label">
+                            <input type="text" class="form-control" placeholder="year of study" id="year">
+                        </label>
+                      </div>
+                      <button  onclick="showCert()" class="btn btn-primary" >submit</button>
+                    </div>
+                 </div>
+            </div>
+          </div>
+    </div>
+    <div class="tab-content" id="certificateWrapper" id="namees">
+          <iframe id="certificateEmbed" style="display: block;" src="" height="1000px" frameborder="0"></iframe>
+    </div>
+</body>
+</html>
